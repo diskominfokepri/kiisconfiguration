@@ -1,4 +1,4 @@
-CREATE TABLE `biodata`(                            
+CREATE TABLE `bkpsdm_silat_biodata_s`(                            
    `pegawai_id` int,                                
    `skpd_id` varchar(15),                           
    `nip_baru` varchar(20),                          
@@ -26,7 +26,7 @@ CREATE TABLE `biodata`(
     clustered by (pegawai_id) INTO 4 BUCKETS 
     stored as orc tblproperties ('transaction'='true');
   
-CREATE INDEX idx_pegawai_id ON TABLE biodata(pegawai_id) AS 'BITMAP' WITH DEFERRED REBUILD;
-CREATE INDEX idx_nip ON TABLE biodata(nip_baru) AS 'BITMAP' WITH DEFERRED REBUILD;
+CREATE INDEX bkpsdm_silat_biodata_s_idx_pegawai_id ON TABLE bkpsdm_silat_biodata_s(pegawai_id) AS 'BITMAP' WITH DEFERRED REBUILD;
+CREATE INDEX bkpsdm_silat_biodata_s_idx_nip ON TABLE bkpsdm_silat_biodata_s(nip_baru) AS 'BITMAP' WITH DEFERRED REBUILD;
 
  
