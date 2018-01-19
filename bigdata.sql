@@ -26,6 +26,7 @@ CREATE TABLE `biodata`(
     clustered by (pegawai_id) INTO 4 BUCKETS 
     stored as orc tblproperties ('transaction'='true');
   
+CREATE INDEX idx_pegawai_id ON TABLE biodata(pegawai_id) AS 'BITMAP' WITH DEFERRED REBUILD;
 CREATE INDEX idx_nip ON TABLE biodata(nip_baru) AS 'BITMAP' WITH DEFERRED REBUILD;
 
  
