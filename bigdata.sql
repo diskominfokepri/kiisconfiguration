@@ -24,7 +24,7 @@ CREATE TABLE `bkpsdm_silat_biodata_s`(
    `aktif` varchar(4),                              
    `tgl_input` date) 
     clustered by (pegawai_id) INTO 4 BUCKETS 
-    stored as orc tblproperties ('transaction'='true');
+    stored as orc tblproperties ('transactional'='true');
   
 CREATE INDEX bkpsdm_silat_biodata_s_idx_pegawai_id ON TABLE bkpsdm_silat_biodata_s(pegawai_id) AS 'BITMAP' WITH DEFERRED REBUILD;
 CREATE INDEX bkpsdm_silat_biodata_s_idx_nip ON TABLE bkpsdm_silat_biodata_s(nip_baru) AS 'BITMAP' WITH DEFERRED REBUILD;
