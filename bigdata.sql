@@ -22,7 +22,7 @@ CREATE TABLE `biodata`(
    `no_hp` varchar(12),                             
    `email` varchar(50),                             
    `aktif` varchar(4),                              
-   `tgl_input` date) PARTITIONED BY (year String, month String)
+   `tgl_input` date) 
     clustered by (pegawai_id) INTO 4 BUCKETS 
     stored as orc tblproperties ('transaction'='true');
   
