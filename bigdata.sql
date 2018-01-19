@@ -26,7 +26,6 @@ CREATE TABLE `biodata`(
     clustered by (pegawai_id) INTO 4 BUCKETS 
     stored as orc tblproperties ('transaction'='true');
   
-CREATE INDEX idx_nip ON TABLE biodata(nip_baru) AS 'org.apache.hadoop.hive.ql.index.compact.CompactIndexHandler' 
-WITH DEFERRED REBUILD;
+CREATE INDEX idx_nip ON TABLE biodata(nip_baru) AS 'BITMAP' WITH DEFERRED REBUILD;
 
  
