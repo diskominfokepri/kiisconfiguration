@@ -15,3 +15,16 @@
     <name>dfs.namenode.rpc-bind-host</name>
     <value>0.0.0.0</value>
 </property>
+<property>
+  <name>dfs.namenode.servicerpc-bind-host</name>
+  <value>0.0.0.0</value>
+</property>
+<property>
+  <name>dfs.namenode.http-bind-host</name>
+  <value>0.0.0.0</value>
+</property>
+<property>
+  <name>dfs.namenode.https-bind-host</name>
+  <value>0.0.0.0</value>
+</property>
+</configuration>
